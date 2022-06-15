@@ -32,4 +32,12 @@ const upload = multer({
   fileFilter: fileFilter,
 }).single("image");
 
-module.exports = { upload };
+const multiple = multer({
+  storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5, // 5MB
+  },
+  fileFilter: fileFilter,
+}).array("image", 4);
+
+module.exports = { upload, multiple };

@@ -3,9 +3,9 @@ const router = express.Router();
 const {
   userLogin,
   userRegister,
-  userEdit,
   userList,
-} = require("../controllers/user.controllers");
+  userEdit,
+} = require("../controllers/user.controller");
 
 const { upload } = require("../middlewares/uploads");
 const { auth } = require("../middlewares/jwt_auth");
